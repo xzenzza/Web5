@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" style="border: 1px solid;width: 800px; height: 600px;">
+        Sorry , you broser dose not support
+    </canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        canvas.width = canvas.scrollWidth;
+        canvas.height = canvas.scrollHeight;
+        var ctx = canvas.getContext('2d');
+        var image = new Image();
+        image.onload = function(){
+            ctx.drawImage(image,0,0,image.naturalWidth,image.naturalHeight,10,10,198,108);
+        }
+        image.src = 'images/colorr.jpg'
+    </script>
+</body>
+</html>

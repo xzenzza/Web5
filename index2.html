@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" style="border: 1px solid; width: 800px; height: 600px">
+      Sorry , you broser dose not support
+    </canvas>
+    <script>
+      var canvas = document.getElementById("canvas");
+      canvas.width = canvas.scrollWidth;
+      canvas.height = canvas.scrollHeight;
+      var ctx = canvas.getContext("2d");
+      var image = new Image();
+      image.onload = function () {
+        // ctx.drawImage(
+        //   image,
+        //   0,
+        //   0,
+        //   image.naturalWidth / 2,
+        //   image.naturalHeight / 2,
+        //   10,
+        //   10,
+        //   198,
+        //   108
+        // );
+        var y1 = 160;
+        var y2 = 330;
+        var y3 = 503;
+        var x1 = 72;
+        var x2 = 245;
+        var x3 = 415;
+        var pattern = ctx.createPattern(image, "repeat");
+        ctx.fillStyle = pattern;
+        // ctx.fillRect(10, 10, 200, 200);
+        ctx.beginPath();
+        ctx.arc(x1, y1, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x2, y1, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x3, y1, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x1, y2, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x2, y2, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x3, y2, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x1, y3, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x2, y3, 30, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x3, y3, 30, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fill();
+        // var tempCanvas = document.createElement('canvas');
+        // tempCanvas.width = 100;
+        // tempCanvas.height = 50;
+        // var tempCtx = tempCanvas.getContext('2d');
+        // tempCtx.drawImage(image,0,0,tempCanvas.width,tempCanvas.height);
+      };
+      image.src = "images/colorr.jpg";
+    </script>
+  </body>
+</html>
